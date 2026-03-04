@@ -6,7 +6,7 @@ cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640) #Sets view width
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480) #Sets view height
 cap.set(cv2.CAP_PROP_FPS, 60) #Attempts 60 frames per second, but I find that this isn't accurate and is limited by hardware (Need to see if this is true)
 
-print("Detecting Pupils...")
+print("Detecting Pupils...") #This is when I position my phone in front of my laptop camera. It has pupils dilating on video in infrared.
 
 while True:
     ret, frame = cap.read() #Takes picture of a saved frame for detecting pupils
@@ -48,4 +48,5 @@ while True:
         break
 
 cap.release()
+
 cv2.destroyAllWindows()
